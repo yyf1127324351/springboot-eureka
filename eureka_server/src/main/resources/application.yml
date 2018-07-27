@@ -1,0 +1,18 @@
+server:
+  port: 8888 #当前Eureka Server服务的端口号
+eureka:
+  instance:
+    hostname: eurekaServer #当前Eureka Server的hostname为eurekaServer
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false #当前服务不需要到Eureka Server上注册
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/
+
+security:
+  basic:
+    enabled: true  #开启基于HTTP basic的认证
+  user:
+    name: user
+    password: password123
