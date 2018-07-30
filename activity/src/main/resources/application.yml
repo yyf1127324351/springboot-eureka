@@ -1,0 +1,14 @@
+server:
+  port: 8881
+spring:
+  application:
+    name: activity
+eureka:
+  instance:
+    hostname: activity
+    prefer-ip-address: true
+    metadata-map:
+      my-metadata: my_activity
+  client:
+    service-url:
+      defaultZone: http://user:password123@127.0.0.1:8888/eureka/
