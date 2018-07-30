@@ -6,9 +6,9 @@ eureka:
     prefer-ip-address: true
   client:
     register-with-eureka: false #当前服务不需要到Eureka Server上注册
-    fetch-registry: false
+    fetch-registry: false #是否从EurekaServer获取注册信息，默认为true。由于当前是一个单点EurekaServer,不需要同步其他EurekaServer节点的数据。所以设置为false
     service-url:
-      defaultZone: http://127.0.0.1:8888/eureka/
+      defaultZone: http://127.0.0.1:8888/eureka/  #设置与EurekaServer交互的地址，多个地址可以用，分隔
 
 security:
   basic:
