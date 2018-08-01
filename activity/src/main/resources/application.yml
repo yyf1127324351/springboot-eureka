@@ -1,14 +1,19 @@
 server:
-  port: 8881
+  tomcat:
+    uri-encoding: UTF-8
+
 spring:
   application:
-    name: activity
+    name: activity  #用于指定注册到EurekaServer 上的应用名称
+  profiles:
+    active: local
 eureka:
   instance:
-    hostname: activity
-    prefer-ip-address: true
-    metadata-map:
-      my-metadata: my_activity
+    hostname: activity #操作系统的hostname
+    prefer-ip-address: true # true表示将自己的ip注册到EurekaServer上。默认为false，将会把hostname注册到EurekaSever上
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+#    lease-renewal-interval-in-seconds: 5 #Eureka客户端向服务端发送心跳的时间间隔，单位为秒,默认为30秒
+    lease-expiration-duration-in-seconds: 10 # Eureka服务端在收到最后一次心跳之后等待的时间上限，单位为秒。超过该时间之后服务端会将该服务实例从服务清单中剔除，从而禁止服务调用请求被发送到该实例上，默认为90秒
   client:
     service-url:
       defaultZone: http://user:password123@127.0.0.1:8888/eureka/
