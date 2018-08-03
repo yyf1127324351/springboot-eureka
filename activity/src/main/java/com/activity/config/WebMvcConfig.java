@@ -20,6 +20,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Autowired
     LoginInterceptor loginInterceptor;
+
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
