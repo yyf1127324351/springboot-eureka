@@ -1,15 +1,14 @@
 server:
-  tomcat:
-    uri-encoding: UTF-8
+  port: 8882
 
 spring:
   application:
-    name: activity  #用于指定注册到EurekaServer 上的应用名称
+    name: fegin-apple  #用于指定注册到EurekaServer 上的应用名称
   profiles:
     active: local
 eureka:
   instance:
-    hostname: activity #操作系统的hostname
+    hostname: apple #操作系统的hostname
     prefer-ip-address: true # true表示将自己的ip注册到EurekaServer上。默认为false，将会把hostname注册到EurekaSever上
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
 #    lease-renewal-interval-in-seconds: 5 #Eureka客户端向服务端发送心跳的时间间隔，单位为秒,默认为30秒
@@ -37,3 +36,4 @@ hystrix:
       execution:
         timeout:
           enabled: false
+

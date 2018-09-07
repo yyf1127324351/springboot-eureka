@@ -26,7 +26,7 @@ public class ActivityDataSourceConfig {
     @Primary
     @ConfigurationProperties(prefix = "spring.activityDataSource.druid")
     public DataSource dataSource(){
-        return DruidDataSourceBuilder.create().build();
+            return DruidDataSourceBuilder.create().build();
     }
 
     @Bean(name = "activitySqlSessionFactory")
