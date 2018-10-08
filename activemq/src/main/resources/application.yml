@@ -1,0 +1,9 @@
+server:
+  port: 8811
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    pool:
+      max-connections: 300
+
+
