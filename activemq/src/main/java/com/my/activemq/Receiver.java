@@ -4,7 +4,7 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 /**
- * 类描述：
+ * 类描述：srpingboot+activeMQ非持久化订阅
  * 创建人：yyf
  * 创建时间：2018/9/29 0029下午 02:26
  */

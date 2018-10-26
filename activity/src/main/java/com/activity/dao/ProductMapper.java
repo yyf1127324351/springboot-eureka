@@ -1,8 +1,10 @@
 package com.activity.dao;
 
 import com.activity.model.dto.ProductDto;
+import com.activity.utils.Pager;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 类描述：
@@ -11,4 +13,8 @@ import java.util.List;
  */
 public interface ProductMapper {
     List<ProductDto> getProductList();
+
+    List<ProductDto> getProductLists(Map<String, Object> param);
+
+    Long selectCount(Map<String, Object> param);
 }

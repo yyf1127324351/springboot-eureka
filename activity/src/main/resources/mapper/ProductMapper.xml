@@ -5,4 +5,13 @@
         select * from product;
     </select>
 
+    <select id="getProductLists" resultType="com.activity.model.dto.ProductDto" parameterType="map">
+        select * from product   LIMIT #{start}, #{pageSize};
+    </select>
+    <select id="selectCount" parameterType="map" resultType="java.lang.Long">
+        select count(1) from product;
+    </select>
+
+
+
 </mapper>

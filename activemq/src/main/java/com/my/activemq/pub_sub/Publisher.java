@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import javax.jms.Destination;
 
 /**
- * 类描述：
+ * 类描述：发布/订阅模式
  * 创建人：yyf
  * 创建时间：2018/10/8 0008下午 04:41
  */
